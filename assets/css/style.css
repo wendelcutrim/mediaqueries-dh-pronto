@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    background-color: #6C4AB6;
+    color: white;
+
+    padding: 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    color: white;
+}
+
+header .container .logo a, header li a {
+    color: inherit;
+}
+
+header .container form {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s all;
+    
+}
+
+header .container form input[type="text"]:placeholder-shown {
+    display: none;
+}
+
+header .container form:hover {
+    width: 25%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active {
+    display: block;
+}
+
+header .container form.active:hover input[type="text"]:placeholder-shown {
+    display: block;
+}
+
+header .container form.active:hover:focus {
+    border: 2px solid green;
+}
+
+header .container form input[type="text"] {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+header .container form span {
+    color: black;
+    cursor: pointer;
+}
+
+header .container ul {
+    display: flex;
+    list-style: none;
+
+    gap: 16px;
+}
+
+header .container ul li {
+    transition: .4s all;
+}
+
+header .container ul li:hover {
+    font-size: 20px;
+    border-bottom: 3px solid yellow;
+}
+
+header .container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .container span {
+    color: white;
+}
+
+header .container .header--controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+header .container .header--controls span {
+    font-size: 32px;
+    transition: .6s all;
+}
+
+header .container .header--controls span:hover {
+    color: #8D9EFF;
+}
+
+/* Comentar */
+header .container .menu {
+    display: none;
+}
