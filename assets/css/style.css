@@ -27,7 +27,7 @@ header {
     padding: 16px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
 }
 
 header .container {
@@ -53,6 +53,11 @@ header .container form {
     align-items: center;
     transition: .6s all;
     
+}
+
+header .container form button {
+    display: grid;
+    place-items: center;
 }
 
 header .container form input[type="text"]:placeholder-shown {
