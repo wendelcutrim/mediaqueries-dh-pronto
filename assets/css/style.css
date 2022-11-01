@@ -225,3 +225,8 @@ footer .container {
     font-weight: bold;
     color: white;
 }
+
+h1::selection, h2::selection, h3::selection, span::selection, p::selection, li a::selection, .container::selection {
+    background-color: yellow;
+    color: black;
+}
