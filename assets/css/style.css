@@ -75,10 +75,6 @@ header .container form.active:hover input[type="text"]:placeholder-shown {
     display: block;
 }
 
-header .container form.active:hover:focus {
-    border: 2px solid green;
-}
-
 header .container form input[type="text"] {
     background: none;
     border: none;
@@ -165,13 +161,16 @@ main .card-product {
     gap: 16px;
 
     padding: 20px;
+   
+    transition: .2s all;
+
+    border-radius: 8px;
+}
+
+main .card-product:hover {
     box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
     -moz-box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
     -webkit-box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
-
-    transition: .1s all;
-
-    border-radius: 8px;
 }
 
 main .card-product img {
@@ -226,10 +225,11 @@ footer .container {
     color: white;
 }
 
-h1::selection, h2::selection, h3::selection, span::selection, p::selection, li a::selection, .container::selection {
+h1::selection, h2::selection, h3::selection, span::selection, p::selection, li a::selection, footer .container::selection {
     background-color: yellow;
     color: black;
 }
+
 @media (max-width: 980px) {
     main .banner button {
         display: none;
