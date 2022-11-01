@@ -14,3 +14,4 @@ function closeSearchBar(event) {
     event.preventDefault();
     searchBar.classList.remove("active");
 }
+

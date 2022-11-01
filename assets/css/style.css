@@ -25,6 +25,9 @@ header {
     color: white;
 
     padding: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 header .container {
@@ -127,10 +130,98 @@ header .container .header--controls span {
 }
 
 header .container .header--controls span:hover {
-    color: #8D9EFF;
+    color: yellow;
 }
 
 /* Comentar */
 header .container .menu {
     display: none;
+}
+
+main .banner {
+    width: 100%;
+    margin-top: 82px;
+}
+
+main .banner .glider {
+   text-align: center;
+}
+
+main .products {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+main .card-product {
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 20px;
+    box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
+    -moz-box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
+    -webkit-box-shadow: -1px 2px 12px 3px rgba(150,150,150,0.61);
+
+    transition: .1s all;
+
+    border-radius: 8px;
+}
+
+main .card-product img {
+    max-height: 300px;
+    transition: .3s all;
+}
+
+main .card-product h3 {
+    margin-top: 8px;
+}
+
+main .card-product button {
+    background-color: #8D72E1;
+    color: white;
+    font-weight: bold;
+
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: .3s all;
+}
+
+main .card-product button:hover {
+    background-color: #654dae;
+    box-shadow: none;
+}
+
+/* main .card-product:hover {
+    border: 1px solid #8D72E1;
+} */
+
+main .card-product img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #8D72E1;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-weight: bold;
+    color: white;
 }
