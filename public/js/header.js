@@ -1,4 +1,4 @@
-console.log("Start JS");
+console.log("Start Header JS");
 
 const searchBar = document.querySelector("#search");
 
