@@ -30,7 +30,7 @@ header {
     padding: 16px;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1;
 }
 
 header .container {
@@ -124,6 +124,68 @@ header .container .header--controls span:hover {
 /* Comentar */
 header .container .menu {
     display: none;
+}
+
+.menu-mobile {
+    display: none;
+    transition: .6s all;
+
+}
+
+.menu-mobile.active {
+    display: block;
+}
+
+.menu-mobile section {
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+    /* inset: 0; */
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgb(245, 245, 245);
+    color: black;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.menu-mobile section ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 50px;
+
+}
+
+.menu-mobile section ul li a {
+    color: inherit;
+}
+
+.menu-mobile section #menu-mobile--close {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+
+    cursor: pointer;
+}
+
+.menu-mobile #menu-mobile--close span {
+    font-size: 32px;
 }
 
 nav {
