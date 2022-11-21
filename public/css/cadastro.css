@@ -26,7 +26,9 @@ main {
 }
 
 .form-register form a {
-    display: block;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
 }
 
 .form-register a:hover {
