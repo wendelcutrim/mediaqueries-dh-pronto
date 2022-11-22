@@ -6,6 +6,9 @@ const inputState = document.querySelector('#state-register');
 const inputCity = document.querySelector('#city-register');
 const inputStreet = document.querySelector('#street-register');
 const inputNeighborhood = document.querySelector('#neighborhood-register');
+const loadingSpinner = document.querySelector('.loading');
+let loading = false;
+
 
 const APP_BASE_URL = 'http://localhost:5500';
 
@@ -61,6 +64,9 @@ function verifyCepLength(event) {
 async function fetchCepData() {
     const cepNumber = inputZipCode.value;
     /* alert(cepNumber.length) */
+    loading = true;
+    handleLoading();
+
     const response = await fetch(`${BRASIL_API_BASE_URL}/${cepNumber}`, CONFIG);
     const data = await response.json();
     console.log(data)
@@ -71,6 +77,9 @@ async function fetchCepData() {
     inputCity.value = city;
     inputStreet.value = street;
     inputNeighborhood.value = neighborhood;
+    
+    loading = false;
+    handleLoading();
 }
 
 function clearInput() {
@@ -78,4 +87,12 @@ function clearInput() {
     inputs.forEach(input => input.value = '');
 }
 
-
+function handleLoading() {
+    if(loading) {
+        loadingSpinner.classList.add('active');
+        document.body.style.background = '#e8e8e8a3';
+    } else {
+        loadingSpinner.classList.remove('active');
+        document.body.style.background = 'white';
+    }
+}

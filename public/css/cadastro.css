@@ -42,6 +42,24 @@ main {
     z-index: 4;
 } */
 
+.loading {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 5;
+    display: none;
+}
+
+.loading.active {
+    display: block;
+}
+
+.loading .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    z-index: 6;
+}
+
 @media (max-width: 768px) {
     .form-register {
         width: 90%;
