@@ -7,12 +7,13 @@ const inputCity = document.querySelector('#city-register');
 const inputStreet = document.querySelector('#street-register');
 const inputNeighborhood = document.querySelector('#neighborhood-register');
 const loadingSpinner = document.querySelector('.loading');
-let loading = false;
 
+let loading = false;
 
 const APP_BASE_URL = 'http://localhost:5500';
 
 const BRASIL_API_BASE_URL = 'https://brasilapi.com.br/api/cep/v2';
+
 const CONFIG = {
     method: 'GET',
     headers: {
